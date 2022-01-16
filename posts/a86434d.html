@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>CSS 绘制渐变圆角边框透明背景按钮 - CHERROW.TOP</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="CHERROW.TOP"><meta name="msapplication-TileImage" content="/img/R-01.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="CHERROW.TOP"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="最近有个比较酷炫的项目，其中有个需求是这样的：圆角矩形按钮，边框是渐变色，背景需透明。网上找了很多资料，在我快要放弃时还是找到了解决方案，不得不说 CSS 相当强大，只要你想不到，没有它做不到。尝试过的方法总结下来就以下三种，下面就回顾一下踩坑的过程。"><meta property="og:type" content="blog"><meta property="og:title" content="CSS 绘制渐变圆角边框透明背景按钮"><meta property="og:url" content="http://cherrow.top/posts/a86434d"><meta property="og:site_name" content="CHERROW.TOP"><meta property="og:description" content="最近有个比较酷炫的项目，其中有个需求是这样的：圆角矩形按钮，边框是渐变色，背景需透明。网上找了很多资料，在我快要放弃时还是找到了解决方案，不得不说 CSS 相当强大，只要你想不到，没有它做不到。尝试过的方法总结下来就以下三种，下面就回顾一下踩坑的过程。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://cherrow.top/cover/20220116170143314.bmp"><meta property="article:published_time" content="2022-01-16T07:50:43.000Z"><meta property="article:modified_time" content="2022-01-16T09:03:01.711Z"><meta property="article:author" content="cherrow"><meta property="article:tag" content="CSS"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/cover/20220116170143314.bmp"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://cherrow.top/posts/a86434d"},"headline":"CSS 绘制渐变圆角边框透明背景按钮","image":[],"datePublished":"2022-01-16T07:50:43.000Z","dateModified":"2022-01-16T09:03:01.711Z","author":{"@type":"Person","name":"cherrow"},"publisher":{"@type":"Organization","name":"CHERROW.TOP","logo":{"@type":"ImageObject","url":{"text":"CHERROW.TOP"}}},"description":"最近有个比较酷炫的项目，其中有个需求是这样的：圆角矩形按钮，边框是渐变色，背景需透明。网上找了很多资料，在我快要放弃时还是找到了解决方案，不得不说 CSS 相当强大，只要你想不到，没有它做不到。尝试过的方法总结下来就以下三种，下面就回顾一下踩坑的过程。"}</script><link rel="canonical" href="http://cherrow.top/posts/a86434d"><link rel="icon" href="/img/R-01.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.15.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?4b9c6e9f70c63998afcc19dafacfb3f3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">CHERROW.TOP</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="访问 GitHub" href="https://github.com/cherrow"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/cover/20220116170143314.bmp" alt="CSS 绘制渐变圆角边框透明背景按钮"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-16T07:50:43.000Z" title="2022/1/16 下午3:50:43">2022-01-16</time>发表</span><span class="level-item"><time dateTime="2022-01-16T09:03:01.711Z" title="2022/1/16 下午5:03:01">2022-01-16</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Web-%E6%8A%80%E6%9C%AF/">Web 技术</a></span><span class="level-item">5 分钟读完 (大约677个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">CSS 绘制渐变圆角边框透明背景按钮</h1><div class="content"><p>最近有个比较酷炫的项目，其中有个需求是这样的：<strong>圆角</strong>矩形按钮，边框是<strong>渐变色</strong>，背景需<strong>透明</strong>。网上找了很多资料，在我快要放弃时还是找到了解决方案，不得不说 CSS 相当强大，只要你想不到，没有它做不到。尝试过的方法总结下来就以下三种，下面就回顾一下踩坑的过程。</p>
+<span id="more"></span>
+
+<h2 id="border-image-实现渐变"><a href="#border-image-实现渐变" class="headerlink" title="border-image 实现渐变"></a>border-image 实现渐变</h2><p>这是最开始尝试的方案，直接用 <code>border-image</code> 来实现边框的渐变效果，但是三个需求中只能实现<strong>边框渐变</strong>和<strong>背景透明</strong>，无法实现<strong>圆角</strong>。可以看下面的代码示例：</p>
+<iframe id="cp_embed_KKXJEdO" src="//codepen.io/cherrow/embed/KKXJEdO?height=330&theme-id=dark&slug-hash=KKXJEdO&default-tab=css,result&embed-version=2" scrolling="no" frameborder="no" height="330" allowtransparency="true" allowfullscreen="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe>
+
+<h2 id="利用绝对定位进行背景遮盖"><a href="#利用绝对定位进行背景遮盖" class="headerlink" title="利用绝对定位进行背景遮盖"></a>利用绝对定位进行背景遮盖</h2><p>由于 <code>border-image</code> 与 <code>border-radius</code> 无法同时生效，只能继续找方案。网上最多的方式就是这一种，原理其实很简单，首先利用绝对定位在按钮的下面放置一个 <code>div</code>（伪元素也可），然后将这个 <code>div</code> 的 <code>background-image</code> 设置成渐变色，最后再将按钮的背景色设置为一个纯色，且设置 <code>background-clip: padding-box</code>，这是为了避免上层的背景延伸至下层外边框导致渐变色被覆盖（具体可查看 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip">MDN</a>），这样底层与上层的间隔看起来就像是一个渐变色的边框。</p>
+<p>但是很遗憾，这种方式也只能满足两个需求：<strong>边框渐变</strong>与<strong>圆角</strong>，无法实现<strong>背景透明</strong>。不过这种方式适用于页面背景是固定色的场景，因为页面背景如果是固定色，我们只需要将上层的背景色也设置为这个背景色就可以了，看起来就像是透明的一样。代码示例：</p>
+<iframe id="cp_embed_NWaoJdV" src="//codepen.io/cherrow/embed/NWaoJdV?height=330&theme-id=dark&slug-hash=NWaoJdV&default-tab=css,result&embed-version=2" scrolling="no" frameborder="no" height="330" allowtransparency="true" allowfullscreen="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe>
+
+<h2 id="利用-mask-实现背景透明"><a href="#利用-mask-实现背景透明" class="headerlink" title="利用 mask 实现背景透明"></a>利用 mask 实现背景透明</h2><p>不得不说 stackoverflow 上的教程比国内大部分知识论坛网站都要好，下面这个方案就是在 stackoverflow 上找到的，原文提供了更多的解决方案，包括利用 <code>svg</code> 自己绘制背景，<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/51496204/border-gradient-with-border-radius#">点击查看原文</a>。原理其实和上一种方式差不多，不同之处就在于使用了 <code>mask</code> 相关的属性实现了背景的透明，至此终于满足了三个需求：边框渐变、圆角、背景透明。</p>
+ <iframe id="cp_embed_KKXJJjL" src="//codepen.io/cherrow/embed/KKXJJjL?height=330&theme-id=dark&slug-hash=KKXJJjL&default-tab=css,result&embed-version=2" scrolling="no" frameborder="no" height="330" allowtransparency="true" allowfullscreen="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe>
+
+</div><div class="article-licensing box"><div class="licensing-title"><p>CSS 绘制渐变圆角边框透明背景按钮</p><p><a href="http://cherrow.top/posts/a86434d">http://cherrow.top/posts/a86434d</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>cherrow</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2022-01-16</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-01-16</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/CSS/">CSS</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/5141e527"><span class="level-item">vue 2.x 接入 typescript</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.7.2/gitalk.css"><script src="https://cdnjs.loli.net/ajax/libs/gitalk/1.7.2/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "cc2ebdc6d2a31ace5b3d17e5bcbb68b0",
+            repo: "cherrow.github.io",
+            owner: "cherrow",
+            clientID: "a5756c3959e5ee7360c8",
+            clientSecret: "06bb1f9f8b69aebbf9f615bfadd23d36def57152",
+            admin: ["cherrow"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#border-image-实现渐变"><span class="level-left"><span class="level-item">1</span><span class="level-item">border-image 实现渐变</span></span></a></li><li><a class="level is-mobile" href="#利用绝对定位进行背景遮盖"><span class="level-left"><span class="level-item">2</span><span class="level-item">利用绝对定位进行背景遮盖</span></span></a></li><li><a class="level is-mobile" href="#利用-mask-实现背景透明"><span class="level-left"><span class="level-item">3</span><span class="level-item">利用 mask 实现背景透明</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">CHERROW.TOP</a><p class="is-size-7"><span>&copy; 2022 cherrow</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span>Since 2021-09-16</span><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="访问 GitHub" href="https://github.com/cherrow"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
